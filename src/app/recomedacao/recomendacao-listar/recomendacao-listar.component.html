@@ -1,13 +1,18 @@
-<h3 class="title" *ngIf="recomendacoes.length > 0">Lista de livros</h3>
+<h3 class="title" *ngIf="recomendacoes.length > 0">Recomendações</h3>
 
 <mat-accordion>
   <mat-expansion-panel *ngFor="let recomendacao of recomendacoes">
-    <mat-expansion-panel-header class="list-title">{{ recomendacao.message }}</mat-expansion-panel-header>
+    <mat-expansion-panel-header class="list-title">{{ recomendacao.title }}</mat-expansion-panel-header>
+    <mat-list role="list">
+      <p><strong>ID: </strong>{{recomendacao.id}}</p>
+      <p><strong>Mensagem: </strong>{{recomendacao.message}}</p>
+      <p><strong>Criado em: </strong> {{recomendacao.createdAt}}</p>
+    </mat-list>
   </mat-expansion-panel>
 </mat-accordion>
 
 <p class="mat-body-1 zero-array" *ngIf="recomendacoes.length <= 0">
   <mat-icon>
     menu_book</mat-icon>
-  Nenhum livro foi cadastrado ainda.
+  Nenhuma recomendação foi cadastrada ainda.
 </p>

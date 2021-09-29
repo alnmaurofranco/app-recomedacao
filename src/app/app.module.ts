@@ -13,12 +13,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { RecomendacaoInserirComponent } from './recomedacao/recomendacao-inserir/recomendacao-inserir.component';
 import { RecomendacaoListarComponent } from './recomedacao/recomendacao-listar/recomendacao-listar.component';
+import { FooterComponent } from './footer/footer.component';
+import { MatListModule } from '@angular/material/list';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecomendacaoInserirComponent,
     RecomendacaoListarComponent,
+    FooterComponent,
+    CabecalhoComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +35,7 @@ import { RecomendacaoListarComponent } from './recomedacao/recomendacao-listar/r
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

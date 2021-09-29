@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  background-color: #673ab7;
+  flex-direction: row;
+  padding: 20px 50px;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  bottom: 0px;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+}
