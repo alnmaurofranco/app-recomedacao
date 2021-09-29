@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Recomedacoes } from '../recomedacao.interface';
+import { Recomendacoes } from '../recomedacao.interface';
 
 @Component({
   selector: 'app-recomendacao-listar',
@@ -9,5 +9,5 @@ import { Recomedacoes } from '../recomedacao.interface';
 export class RecomendacaoListarComponent {
   constructor() {}
 
-  @Input() recomendacoes: Recomedacoes[] = [];
+  @Input() recomendacoes: Recomendacoes[] = [];
 }

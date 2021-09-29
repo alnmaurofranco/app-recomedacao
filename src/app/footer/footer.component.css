@@ -1,12 +1,12 @@
-.container {
+.footer {
   display: flex;
-  background-color: #673ab7;
-  flex-direction: row;
-  padding: 20px 50px;
+  height: 20vh;
   align-items: center;
   justify-content: center;
-  height: 15vh;
-  bottom: 0px;
+}
+
+.bg-purple {
+  background-color: #673ab7;
 }
 
 .copyright {

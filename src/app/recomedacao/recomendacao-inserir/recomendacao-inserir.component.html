@@ -1,24 +1,18 @@
-<h2 class="txt-center">Crie sua primeira recomendação!!</h2>
+<h2 class="text-center fs-5">Crie sua primeira recomendação!</h2>
 
 <form (submit)="onRecomendacaoAdicionar(recomedancoesForm)" #recomedancoesForm="ngForm">
   <mat-form-field appearance="fill">
-    <mat-label>Recomendação relacionada</mat-label>
-    <input matInput type="text" name="title" ngModel placeholder="Digite um titulo..." minlength="2" maxlength="200"
-      required>
-    <button *ngIf="true" matSuffix mat-icon-button>
-      <mat-icon>close</mat-icon>
-    </button>
-    <mat-error>Recomendação relacionada deve ter pelo menos 2 caracteres</mat-error>
+    <mat-label>Tópico da recomendação</mat-label>
+    <input matInput type="text" name="topic" ngModel placeholder="Digite um tópico desta recomendação..." minlength="2"
+      maxlength="200" required>
+    <mat-error>Tópico da recomendação deve ter pelo menos 2 caracteres</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Recomendação</mat-label>
     <input matInput type="text" name="message" ngModel placeholder="Digite uma recomendação" minlength="2"
       maxlength="200" required>
-    <button *ngIf="true" matSuffix mat-icon-button>
-      <mat-icon>close</mat-icon>
-    </button>
-    <mat-error>Uma recomendação deve ter pelo menos 2 caracteres</mat-error>
+    <mat-error>Recomendação deve ter pelo menos 2 caracteres</mat-error>
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit">
