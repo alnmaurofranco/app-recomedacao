@@ -11,11 +11,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { RecomendacaoInserirComponent } from './recomendacao-inserir/recomendacao-inserir.component';
-import { RecomendacaoListarComponent } from './recomendacao-listar/recomendacao-listar.component';
+import { RecomendacaoInserirComponent } from './recomedacao/recomendacao-inserir/recomendacao-inserir.component';
+import { RecomendacaoListarComponent } from './recomedacao/recomendacao-listar/recomendacao-listar.component';
 
 @NgModule({
-  declarations: [AppComponent, RecomendacaoInserirComponent, RecomendacaoListarComponent],
+  declarations: [
+    AppComponent,
+    RecomendacaoInserirComponent,
+    RecomendacaoListarComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
