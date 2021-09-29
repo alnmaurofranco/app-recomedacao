@@ -1,23 +1,22 @@
-<h3 class="title" *ngIf="recomendacoes.length > 0">Recomendações</h3>
+<h3 class="fs-4 text-center" *ngIf="recomendacoes.length > 0">Recomendações</h3>
 
-<mat-accordion>
-  <mat-expansion-panel *ngFor="let recomendacao of recomendacoes">
-    <mat-expansion-panel-header class="list-title">
-      <mat-panel-description>
-        <mat-icon class="icone-ajust">
-          speaker_notes
-        </mat-icon>
-        {{recomendacao.title}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-list role="list">
-      <p><strong>ID: </strong>{{recomendacao.id}}</p>
-      <p><strong>Mensagem: </strong>{{recomendacao.message}}</p>
-      <p><strong>Criado em: </strong> {{recomendacao.createdAt | date:"dd/MM/yy"}}</p>
-    </mat-list>
-  </mat-expansion-panel>
-</mat-accordion>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let recomendacao of recomendacoes">
+      <div class="card text-white bg-purple mb-3">
+        <div class="card-header text-center font-monospace fw-bold">
+          {{recomendacao.topic | uppercase}}
+        </div>
+        <div class="card-body">
+          <h3 class="card-title fw-bold">{{recomendacao.message}}</h3>
+          <p class="card-text"><strong>ID: </strong>{{recomendacao.id}}</p>
+          <p class="card-text"><strong>Criado em: </strong> {{recomendacao.createdAt | date:"dd/MM/yy"}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p class="mat-body-1 zero-array" *ngIf="recomendacoes.length <= 0">
+<p class="mat-body-1 fs-4 text-center" *ngIf="recomendacoes.length <= 0">
   Nenhuma recomendação foi cadastrada ainda.
 </p>

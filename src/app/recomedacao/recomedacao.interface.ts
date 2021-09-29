@@ -1,8 +1,8 @@
-interface Recomedacoes {
+interface Recomendacoes {
   id?: string;
-  title: string;
+  topic: string;
   message: string;
   createdAt?: Date;
 }
 
-export { Recomedacoes };
+export { Recomendacoes };
