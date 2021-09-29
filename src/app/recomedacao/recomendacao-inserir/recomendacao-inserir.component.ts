@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Recomedacoes } from '../recomedacao.interface';
 
 @Component({
@@ -8,4 +9,18 @@ import { Recomedacoes } from '../recomedacao.interface';
 })
 export class RecomendacaoInserirComponent {
   @Output() recomendacaoInserida = new EventEmitter<Recomedacoes>();
+
+  onRecomendacaoAdicionar(form: NgForm) {
+    const { invalid, value } = form;
+
+    if (invalid) return;
+
+    const recomendacao: Recomedacoes = {
+      // id: uuid(),
+      message: value.message,
+      // createdAt: new Date()
+    };
+
+    this.recomendacaoInserida.emit(recomendacao);
+  }
 }

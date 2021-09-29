@@ -9,5 +9,5 @@ import { Recomedacoes } from '../recomedacao.interface';
 export class RecomendacaoListarComponent {
   constructor() {}
 
-  @Input() recomendacoes: Recomedacoes = [];
+  @Input() recomendacoes: Recomedacoes[] = [];
 }

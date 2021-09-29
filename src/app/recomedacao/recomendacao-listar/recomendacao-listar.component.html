@@ -1,1 +1,13 @@
-<p>recomendacao-listar works!</p>
+<h3 class="title" *ngIf="recomendacoes.length > 0">Lista de livros</h3>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let recomendacao of recomendacoes">
+    <mat-expansion-panel-header class="list-title">{{ recomendacao.message }}</mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<p class="mat-body-1 zero-array" *ngIf="recomendacoes.length <= 0">
+  <mat-icon>
+    menu_book</mat-icon>
+  Nenhum livro foi cadastrado ainda.
+</p>

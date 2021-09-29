@@ -6,7 +6,7 @@ import { Recomedacoes } from '../app/recomedacao/recomedacao.interface';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  recomendacoes: Recomedacoes = [];
+  recomendacoes: Recomedacoes[] = [];
 
   onRecomendacaoInserida(recomendacoes: Recomedacoes) {
     this.recomendacoes = [...this.recomendacoes, recomendacoes];
