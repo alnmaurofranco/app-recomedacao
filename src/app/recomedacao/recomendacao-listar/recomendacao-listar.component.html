@@ -2,11 +2,18 @@
 
 <mat-accordion>
   <mat-expansion-panel *ngFor="let recomendacao of recomendacoes">
-    <mat-expansion-panel-header class="list-title">{{ recomendacao.title }}</mat-expansion-panel-header>
+    <mat-expansion-panel-header class="list-title">
+      <mat-panel-description>
+        <mat-icon style="margin-right: 1.5rem;">
+          speaker_notes
+        </mat-icon>
+        {{recomendacao.title}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
     <mat-list role="list">
       <p><strong>ID: </strong>{{recomendacao.id}}</p>
       <p><strong>Mensagem: </strong>{{recomendacao.message}}</p>
-      <p><strong>Criado em: </strong> {{recomendacao.createdAt}}</p>
+      <p><strong>Criado em: </strong> {{recomendacao.createdAt | date:"dd/MM/yy"}}</p>
     </mat-list>
   </mat-expansion-panel>
 </mat-accordion>

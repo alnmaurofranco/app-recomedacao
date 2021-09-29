@@ -5,11 +5,12 @@
   padding: 20px 50px;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  height: 15vh;
   bottom: 0px;
 }
 
 .copyright {
   color: #fff;
   text-align: center;
+  font-size: 17px;
 }

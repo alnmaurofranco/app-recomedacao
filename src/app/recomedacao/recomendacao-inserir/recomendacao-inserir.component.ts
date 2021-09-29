@@ -13,7 +13,7 @@ export class RecomendacaoInserirComponent {
   @Output() recomendacaoInserida = new EventEmitter<Recomedacoes>();
 
   onRecomendacaoAdicionar(form: NgForm) {
-    const { invalid, value, resetForm } = form;
+    const { invalid, value } = form;
 
     if (invalid) return;
 
